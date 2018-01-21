@@ -1,0 +1,6 @@
+usr/local/bin/pushi-qt usr/bin
+share/pixmaps/pushi32.xpm usr/share/pixmaps
+share/pixmaps/pushi16.xpm usr/share/pixmaps
+share/pixmaps/pushi128.png usr/share/pixmaps
+debian/pushi-qt.desktop usr/share/applications
+debian/pushi-qt.protocol usr/share/kde4/services/

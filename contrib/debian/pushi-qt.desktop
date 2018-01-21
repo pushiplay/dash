@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Pushi
+Comment=Pushi P2P Cryptocurrency
+Comment[fr]=Pushi, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Pushi, eşten eşe kriptografik sanal para birimi
+Exec=pushi-qt %u
+Terminal=false
+Type=Application
+Icon=pushi128
+MimeType=x-scheme-handler/pushi;
+Categories=Office;Finance;
