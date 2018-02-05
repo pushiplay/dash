@@ -3,7 +3,7 @@ Pushi Core
 
 ![Pushi](https://github.com/pushiplay/pushi/raw/master/src/qt/res/icons/bitcoin.png "Polis")
 
-https://www.pushiplay.pw
+http://www.pushiplay.pw
 
 
 What is Pushi?
@@ -16,7 +16,7 @@ are carried out collectively by the network. Pushi Core is the name of the open
 source software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Pushi Core software, see https://www.pushiplay.pw.
+the Pushi Core software, see http://www.pushiplay.pw.
 
 
 License
