@@ -142,8 +142,9 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x0000071ed448e4468c0931723e7aa9a422b02c09579309c7a784606b6e103ec0"));
         assert(genesis.hashMerkleRoot == uint256S("0x4e1be5347ee12e5d4636fcd0de1e3118fe4b15d3c15224fb69b7f7bd74e96284"));
 
-        //vSeeds.push_back(CDNSSeedData("ns1.pushiplay.pw", "dnsseed.pushiplay.pw"));
-        //vSeeds.push_back(CDNSSeedData("ns1.guardcoin.trade", "dnsseed.guardcoin.trade"));
+        vSeeds.push_back(CDNSSeedData("pushiplay.pw", "dnsseed.pushiplay.pw"));
+        vSeeds.push_back(CDNSSeedData("superpool.win", "dnsseed.superpool.win"));
+        vSeeds.push_back(CDNSSeedData("guardcoin.trade", "dnsseed.guardcoin.trade"));
 
         // Pushi addresses start with 'P'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,55);
