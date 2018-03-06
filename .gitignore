@@ -132,3 +132,6 @@ pushi-cli
 pushid
 pushi-qt
 make
+
+nbproject/
+
