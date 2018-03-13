@@ -38,10 +38,17 @@ To build executables for Windows 64-bit:
 
 Note: To avoid std::thread issue #1751. Switch to the "posix" implementation, which can be done with "update-alternatives" (on Debian/Ubuntu):
 
+    # 32-bit
     $ sudo update-alternatives --config i686-w64-mingw32-gcc
     (select i686-w64-mingw32-gcc-posix)
     $ sudo update-alternatives --config i686-w64-mingw32-g++
     (select i686-w64-mingw32-g++-posix)
+
+    # 64-bit
+    sudo update-alternatives --config x86_64-w64-mingw32-gcc
+    (select posix)
+    sudo update-alternatives --config x86_64-w64-mingw32-g++
+    (select posix)
 
 For further documentation on the depends system see [README.md](../depends/README.md) in the depends directory.
 
