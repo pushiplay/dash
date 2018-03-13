@@ -36,7 +36,7 @@ To build executables for Windows 64-bit:
     ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32
     make
 
-Note: To avoid std::thread issue #1751. Switch to the "posix" implementation, which can be done with "update-alternatives" (on Debian/Ubuntu):
+Note: To avoid std::thread issue. Switch to the "posix" implementation, which can be done with "update-alternatives" (on Debian/Ubuntu):
 
     # 32-bit
     $ sudo update-alternatives --config i686-w64-mingw32-gcc
