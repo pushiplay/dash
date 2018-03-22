@@ -1252,12 +1252,16 @@ CAmount GetBlockSubsidy(int nPrevBits, int nPrevHeight, const Consensus::Params&
         nSubsidyBase = (11111.0 / (pow((dDiff+51.0)/6.0,2.0)));
         if(nSubsidyBase > 500) nSubsidyBase = 500;
         else if(nSubsidyBase < 25) nSubsidyBase = 25;
-    } else {
+    } else if (nPrevHeight < 27000) {
         // GPU/ASIC mining era
         // 2222222/(((x+2600)/9)^2)
         nSubsidyBase = (2222222.0 / (pow((dDiff+2600.0)/9.0,2.0)));
         if(nSubsidyBase > 25) nSubsidyBase = 25;
         else if(nSubsidyBase < 5) nSubsidyBase = 5;
+    } else {
+        nSubsidyBase = (2222222.0 / (pow((dDiff+2600.0)/9.0,2.0)));
+        if(nSubsidyBase > 25) nSubsidyBase = 25;
+        else if(nSubsidyBase < 5) nSubsidyBase = 20;
     }
 
     // LogPrintf("height %u diff %4.2f reward %d\n", nPrevHeight, dDiff, nSubsidyBase);
@@ -1285,14 +1289,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
     if(nHeight > nMNPIBlock)                  ret += blockValue / 20; // 550    - 25.0% - 2018-02
     if(nHeight > nMNPIBlock+(nMNPIPeriod* 1)) ret += blockValue / 20; // 17830  - 30.0% - 2018
     
-    if(nHeight > nMNPIBlock+(nMNPIPeriod* 2)) ret += blockValue / 20; // 35110 - 35.0% 
-    if(nHeight > nMNPIBlock+(nMNPIPeriod* 3)) ret += blockValue / 40; // 52390 - 37.5% 
-    if(nHeight > nMNPIBlock+(nMNPIPeriod* 4)) ret += blockValue / 40; // 69670 - 40.0% 
-    if(nHeight > nMNPIBlock+(nMNPIPeriod* 5)) ret += blockValue / 40; // 86950 - 42.5% 
-    if(nHeight > nMNPIBlock+(nMNPIPeriod* 6)) ret += blockValue / 40; // 104230 - 45.0% 
-    if(nHeight > nMNPIBlock+(nMNPIPeriod* 7)) ret += blockValue / 40; // 121510 - 47.5% 
-    if(nHeight > nMNPIBlock+(nMNPIPeriod* 9)) ret += blockValue / 40; // 138790 - 50.0% 
-
+    if(nHeight > 27000) ret = blockValue - blockValue/40; // 27000 - 97.5%
     return ret;
 }
 
