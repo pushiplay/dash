@@ -1,4 +1,4 @@
-Pushi Core 0.12.1
+Pushi Core 1.1.0
 =====================
 
 This is the official reference wallet for Pushi digital currency and comprises the backbone of the Pushi peer-to-peer network. You can [download Pushi Core](https://www.pushi.org/downloads/) or [build it yourself](#building) using the guides below.

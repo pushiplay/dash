@@ -1,4 +1,4 @@
-Pushi Core 0.12.1
+Pushi Core 1.1.0
 =====================
 
 Intro
