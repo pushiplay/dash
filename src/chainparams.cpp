@@ -118,9 +118,9 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_DIP0001].nThreshold = 3226; // 80% of 4032
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork =  uint256S("0x00000000000000000000000000000000000000000000000062858b4b212a348e"); // 17677
+        consensus.nMinimumChainWork =  uint256S("0x0000000000000000000000000000000000000000000000007812d04a12388177"); // 31167
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x000000000000e6fbd60761f96d386c71b688faea2c85743d72b2c07895f8d3f8"); // 17677
+        consensus.defaultAssumeValid = uint256S("0x00000000000759b5b77296f78c609e28d3ddc425c67208b7819f4790e2d34a80"); // 31167
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -131,7 +131,7 @@ public:
         pchMessageStart[1] = 0x0c;
         pchMessageStart[2] = 0x6b;
         pchMessageStart[3] = 0xbd;
-        vAlertPubKey = ParseHex("048240a8748a80a286b270ba126705ced4f2ce5a7847b3610ea3c06513150dade2a8512ed5ea86320824683fc0818f0ac019214973e677acd1244f6d0571fc5103");
+        vAlertPubKey = ParseHex("047176bff6848c0def05ce20ad726a6c211397aa6d4ca2c84202c78c513d66c95103361e815542cf9d847dfbc9d0cfb41fbcbdd719dd77e8db0eea09a4a93a4d14");
         nDefaultPort = 9847;
         nMaxTipAge = 6 * 60 * 60; // ~144 blocks behind -> 2 x fork detection time, was 24 * 60 * 60 in bitcoin
         nDelayGetHeadersTime = 24 * 60 * 60;
@@ -170,8 +170,8 @@ public:
 
         nPoolMaxTransactions = 3;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
-        strSporkPubKey = "04549ac134f694c0243f503e8c8a9a986f5de6610049c40b07816809b0d1d06a21b07be27b9bb555931773f62ba6cf35a25fd52f694d4e1106ccd237a7bb899fdd";
-
+        strSporkPubKey = "04bf055407727f833552c5dd36e4e33d889525b72c15a40bfe64eed1ddf766636ae0a4437f29c73820d27203db43c91dbe89f166a67571ad537c071c20afde7a6e";
+        
         checkpointData = (CCheckpointData) {
             boost::assign::map_list_of
             (  100, uint256S("0x0000009a00edb2439df37b8c079a05ccce8218180b03b7f42410a1455eb2f42a"))
@@ -183,9 +183,10 @@ public:
             (  8500, uint256S("0x000000000000d3907bb95879e02e1275a5f1bbfc75bbbef566f1f9be87971681"))
             (  10500, uint256S("0x00000000000016d70a275c44cf6c9d8fbaf69482df4b1793ef1b9a582954b6b2"))
             (  12500, uint256S("0x0000000000002389fd7a7983af0b167743e06697bdd38c5bc31d86243c2112c7"))
-            (  17677, uint256S("0x000000000000e6fbd60761f96d386c71b688faea2c85743d72b2c07895f8d3f8")),
-            1520303238, // * UNIX timestamp of last checkpoint block
-            17677,    // * total number of transactions between genesis and last checkpoint
+            (  17677, uint256S("0x000000000000e6fbd60761f96d386c71b688faea2c85743d72b2c07895f8d3f8"))
+            (  31167, uint256S("0x00000000000759b5b77296f78c609e28d3ddc425c67208b7819f4790e2d34a80")),
+            1522436073, // * UNIX timestamp of last checkpoint block
+            188207,    // * total number of transactions between genesis and last checkpoint
                         //   (the tx=... number in the SetBestChain debug.log lines)
             550        // * estimated number of transactions per day after checkpoint
         };
