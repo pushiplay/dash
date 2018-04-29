@@ -1,5 +1,5 @@
 ---
-name: "pushi-win-1.1.6"
+name: "pushi-win-1.1.7"
 enable_cache: true
 suites:
 - "trusty"
